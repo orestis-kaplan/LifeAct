@@ -1,5 +1,5 @@
 <?php
-require 'C:\xampp\htdocs\LifeAct\Register\connect.php';
+require 'C:\xampp\htdocs\LifeAct\Register\connect.php'; //Your path for the connect.php
 $username=$password='';
 $username_err=$password_err='';
 
