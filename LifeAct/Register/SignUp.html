@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="signup.css">
+<head>
+	<title>Sign up</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+	<form class="animate" action="http://localhost/LifeAct/Register/RegistrationForm.php" method="post">
+			<h2 style="text-align:center;">Sign up</h2>
+			<div class="container">
+					<label for="uname"><b>Username</b></label><br>
+					<input  type="text" placeholder="Enter a username" name="uname" value="<?php echo $username; ?>">
+					 <span class="error">* <?php echo "something";?></span>
+					<br>
+					<label for="psw"><b>Password</b></label><br>
+					<input type="password" id="password" placeholder="Choose a password" name="psw" onkeyup='check();'>
+					 <span class="error">* <?php echo $password_err;?></span>
+					<br>
+					<label for="cnf_psw"><b>Confirm Password</b></label><br>
+					<input type="password" id="confirm_password" placeholder="Confirm your password" name="cnf_psw" onkeyup='check();'>
+					 <span class="error">* <?php echo $confirm_err;?></span>
+					<img id="green_tick" src="C:\xampp\htdocs\LifeAct\Register\icons\green.jpg">
+					<img id="red_tick" src="C:\xampp\htdocs\LifeAct\Register\icons\red.jpg">
+					<br>
+					<label for="mail"><b>E-mail</b></label><br>
+					<input type="email" placeholder="someone@e-mail.com" name="mail">
+					 <span class="error">* <?php echo $email_err;?></span>
+					<br><br>
+					<input id="finish_button" type="submit" name="submit"  value="Finish">
+			</div>
+	</form>
+</body>
+<script>
+	var check = function(){
+		if(document.getElementById('password').value==document.getElementById('confirm_password').value)
+		{
+			document.getElementById('green_tick').style.visibility='visible';
+			document.getElementById('red_tick').style.visibility='hidden';
+		}
+		else{
+		    document.getElementById('green_tick').style.visibility='hidden';
+			document.getElementById('red_tick').style.visibility='visible';
+		}
+	}
+</script>
+
+
+</html>

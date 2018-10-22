@@ -1,0 +1,74 @@
+html{
+	overflow:auto;
+	height:100%;
+}
+body{
+	min-height:100%;
+}
+#green_tick{
+transform: scale(0.5,0.5);
+position:absolute;
+margin:-8px 0px 0px 0px;
+visibility:hidden;
+}
+#red_tick{
+transform: scale(0.5,0.5);
+position:absolute;
+margin:-8px 0px 0px 0px;
+visibility:hidden;
+}
+form{
+border:2px solid rgba(0, 0, 0, .5);
+width:578px;
+margin:auto;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+input[type=text],input[type=password],input[type=email]{
+	font-style:oblique;
+	padding:5px 0px 5px 0px;
+	width:76%;
+	margin-left: 12%;
+    margin-top: 0px;
+	display:inline-block;
+	border:2px solid #ddd;
+	text-align:left;
+}
+label{
+	margin-left:41%;
+}
+#finish_button{
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 40%;
+    margin-bottom: 4%;
+    margin-top: 2%;
+    width: 101px;
+    border: none;
+    padding: 13px;
+	border-radius:12px;
+}
+#finish_button:hover{
+	opacity:0.8;
+}
+.animate{
+		animation: animatezoom 0.4s
+}
+@keyframes animatezoom{
+		from {transform: scale(0)}
+	    to {transform: scale(1)}
+}
+.error{
+		color:red;
+		font-size:12px;
+}
+.php_err{
+	 color: red;
+    margin-left: 12%;
+    font-size: 14px;
+}
+
+
+
+
+
+
